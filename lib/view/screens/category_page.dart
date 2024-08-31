@@ -18,34 +18,33 @@ class CategoryPage extends StatelessWidget {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              buildCard('Love',quotes),
-              buildCard('Affirmation',quotes),
-              buildCard('Motivation',quotes),
-              buildCard('Deep',quotes),
-              buildCard('Positive',quotes),
-              buildCard('Mental Health',quotes),
-              buildCard('Discipline',quotes),
-              buildCard('Broken',quotes),
-              buildCard('Self Esteem',quotes),
-              buildCard('Success',quotes),
-              buildCard('Friendship',quotes),
-              buildCard('Loyalty',quotes),
-              buildCard('Kindness',quotes),
-              buildCard('Funny',quotes),
-              buildCard('Happy',quotes),
-              buildCard('Sad',quotes),
-              buildCard('Hope',quotes),
-              buildCard('Gratitude',quotes),
-              buildCard('Ego',quotes),
-              buildCard('Patience',quotes),
+              buildCard('Love'),
+              buildCard('Affirmation'),
+              buildCard('Motivation'),
+              buildCard('Deep'),
+              buildCard('Positive'),
+              buildCard('Mental Health'),
+              buildCard('Discipline'),
+              buildCard('Broken'),
+              buildCard('Self Esteem'),
+              buildCard('Success'),
+              buildCard('Friendship'),
+              buildCard('Loyalty'),
+              buildCard('Kindness'),
+              buildCard('Funny'),
+              buildCard('Happy'),
+              buildCard('Sad'),
+              buildCard('Hope'),
+              buildCard('Gratitude'),
+              buildCard('Ego'),
+              buildCard('Patience'),
             ],
           ),
         )
     );
   }
 
-  Widget buildCard(String name
-      ,QuotesController quotes) {
+  Widget buildCard(String name) {
     return GestureDetector(
       onTap: () {
         quotes.categoryWiseData(name);
@@ -55,7 +54,7 @@ class CategoryPage extends StatelessWidget {
         margin: EdgeInsets.only(top: 15),
           child: ListTile(
             title: Text(textAlign: TextAlign.center,'$name',style: TextStyle(fontSize: 20),),
-            leading: Icon(Icons.format_quote),
+            leading: Icon(Icons.format_quote_rounded),
             trailing: Icon(Icons.chevron_right),
           ),
         ),
